@@ -1,2 +1,11 @@
 # my-portfolio
-This is self made portfolio
+### Version 1.0.0
+
+### materials
+
+** html  / css / js
+
+
+
+
+

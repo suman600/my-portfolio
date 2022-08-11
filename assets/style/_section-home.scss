@@ -1,0 +1,48 @@
+@import "./theme/variables";
+// 
+.section-home {
+    position: relative;
+    height: 100vh;
+    padding: 1rem;
+    overflow: hidden;
+    div {
+        position: absolute;
+        top: 30%;
+        left: 14%;
+    }
+    h1 {
+        font-size: $font-size-base*4;
+        font-weight: $font-weight-bolder;
+        color: $white;
+    }
+    h3 {
+        color: $white;
+        font-weight: $font-weight-normal;
+        span:not(.text-blink) {
+            position: relative;
+            letter-spacing: 1.5px;
+            &::after {
+                content: "";
+                height: 4px;
+                background: $primary;
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+@keyframes text-blink {
+    0% {
+        display: none;
+        opacity: 0;
+        transition: $transition;
+    }
+    100% {
+        display: inherit;
+        opacity: 1;
+        transition: $transition;
+    }
+}

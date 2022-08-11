@@ -1,0 +1,12 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: $spacer $spacer;
+    word-wrap: break-word;
+    font-size: $card-font-size;
+    background-color: $white;
+    border-radius: $card-radius;
+    box-shadow: $card-box-shadow;
+    background-clip: border-box;
+}

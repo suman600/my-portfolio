@@ -1,0 +1,56 @@
+@import "./theme/variables";
+@mixin sidebar-view() {
+    margin-left: -300px;
+    transition: $transition;
+}
+
+body {
+    background: url(https://bootstrapmade.com/demo/templates/iPortfolio/assets/img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    color: $body-color;
+}
+
+.page {
+    $self: &;
+    display: flex;
+    flex-direction: row;
+    transition: $transition;
+    &__sidebar {
+        height: 100vh;
+        width: 300px;
+    }
+    &__content {
+        height: 100vh;
+        overflow: auto;
+        flex: 1;
+    }
+    &.sidebar-hidden {
+        @include sidebar-view();
+    }
+    @media screen and (max-width: 767px) {
+        @include sidebar-view();
+    }
+}
+
+.page-caption {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    color: $caption-color;
+    font-weight: $font-weight-bold;
+    &::after {
+        content: "";
+        height: 3px;
+        width: 50px;
+        background: $primary;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    +p {
+        margin-bottom: 2rem;
+    }
+}

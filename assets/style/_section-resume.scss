@@ -1,0 +1,61 @@
+@import "./theme/variables";
+//
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    h3 {
+        color: $resume-title-color;
+        font-size: $resume-title-font-size;
+        margin-bottom: $resume-title-margin-bottom;
+        font-weight: $font-weight-bold;
+    }
+}
+
+.resume-content {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 1.5rem;
+    h5 {
+        font-weight: $font-weight-bold;
+        font-size: $resume-sub-title-font-size;
+        color: $resume-title-color;
+        line-height: $line-height-xs;
+        margin-bottom: $spacer;
+    }
+    &::before {
+        content: "";
+        height: $spacer;
+        width: $spacer;
+        border-radius: 100%;
+        background: $white;
+        position: absolute;
+        top: 0;
+        left: -7px;
+        border: 2px solid $resume-border-color;
+        z-index: $zindex-normal-over;
+    }
+    &::after {
+        content: "";
+        width: 2px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: $resume-border-color;
+        z-index: $zindex-normal;
+    }
+    ul {
+        list-style-type: disc;
+        padding-left: 14px;
+        li {
+            margin-bottom: 1rem;
+            &::marker {
+                margin-right: 1px;
+            }
+        }
+    }
+    .badge {
+        margin-bottom: $spacer*0.85;
+    }
+}

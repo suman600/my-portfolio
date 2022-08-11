@@ -1,0 +1,110 @@
+$white: #fff !default;
+$black: #000 !default;
+$primary: #149ddd !default;
+$dark: #272829 !default;
+$grey: #a8a9b4 !default;
+$sidebar-bg-color: #040b14 !default;
+$caption-text-color: #173b6c;
+$light-grey: #f5f8fd;
+// enable
+$body-color: $dark !default;
+$sidebar-bg: $sidebar-bg-color !default;
+$caption-color: $caption-text-color !default;
+$primary-light-bg: $light-grey !default;
+$progress-bg: $light-grey !default;
+$resume-title-color: #050d18 !default;
+$resume-border-color: #1f5297 !default;
+$sidebar-link-bg: #212431 !default;
+// Style anchor elements.
+$link-color: $grey !default;
+$link-decoration: underline !default;
+$link-hover-color: $primary !default;
+// font
+$font-family-sans-serif: system-ui,
+-apple-system,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+"Noto Sans",
+"Liberation Sans",
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji" !default;
+// space 
+$spacer: 1rem !default;
+// font enable
+$font-family-base: $font-family-sans-serif !default;
+// font-size
+$font-size-base: 1rem !default;
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+// font-weight
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+$font-weight-base: $font-weight-normal !default;
+// line height
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+$line-height-xs: 1 !default;
+// typo font
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+$lead-font-size: $font-size-base * 1.25 !default;
+$lead-font-weight: 300 !default;
+$small-font-size: .875em !default;
+$resume-title-font-size: $font-size-base * 1.625 !default;
+$resume-sub-title-font-size: $font-size-base * 1.125 !default;
+// // scss-docs-start headings-variables
+$headings-margin-bottom: $spacer * .5 !default;
+$headings-font-family: null !default;
+$headings-font-style: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+$headings-color: null !default;
+$resume-title-margin-bottom: $spacer * 1.25 !default;
+// zindex
+$zindex-dropdown: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-modal-backdrop: 1050 !default;
+$zindex-modal: 1055 !default;
+$zindex-popover: 1070 !default;
+$zindex-tooltip: 1080 !default;
+$zindex-normal: 9 !default;
+$zindex-normal-over: 99 !default;
+// Style p element.
+$paragraph-margin-bottom: 1rem !default;
+$transition: all .3s ease-in-out;
+// badge
+$badge-padding-y: $spacer * 0.35 !default;
+$badge-padding-x: $spacer * 0.65 !default;
+$badge-font-weight: $font-weight-bold !default;
+$badge-font-size: $font-size-base * 0.85 !default;
+$badge-color: $white !default;
+$badge-border-radius: 0.375rem !default;
+$badge-resume-bg: #e4edf9 !default;
+// card
+$card-radius: 0.25rem !default;
+$card-background: $white !default;
+$card-box-shadow: 0 2px 10px rgba($body-color, 20%) !default;
+$card-font-size: $font-size-base !default;
+$card-padding: $spacer $spacer !default;
+// carousel
+$carousel-transition: transform .6s ease-in-out;
+$carousel-indicator-width: $spacer;
+$carousel-indicator-height: $spacer;
+$carousel-border-color: $primary;
+$carousel-bg-color: $primary;
+$carousel-indicator-transition: all 0.6s ease;
+$carousel-zindex: $zindex-normal;
