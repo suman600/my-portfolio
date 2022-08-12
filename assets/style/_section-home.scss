@@ -2,47 +2,48 @@
 // 
 .section-home {
     position: relative;
+    background: url(https://bootstrapmade.com/demo/templates/iPortfolio/assets/img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
-    padding: 1rem;
-    overflow: hidden;
-    div {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba($sidebar-bg, .3);
+        z-index: $zindex-normal;
+    }
+    .wrapper {
+        position: relative;
+        z-index: 99;
         position: absolute;
         top: 30%;
         left: 14%;
-    }
-    h1 {
-        font-size: $font-size-base*4;
-        font-weight: $font-weight-bolder;
-        color: $white;
-    }
-    h3 {
-        color: $white;
-        font-weight: $font-weight-normal;
-        span:not(.text-blink) {
-            position: relative;
-            letter-spacing: 1.5px;
-            &::after {
-                content: "";
-                height: 4px;
-                background: $primary;
-                position: absolute;
-                bottom: -6px;
-                left: 0;
-                right: 0;
+        h1 {
+            font-size: $font-size-base*4;
+            font-weight: $font-weight-bolder;
+            color: $white;
+        }
+        h3 {
+            color: $white;
+            font-weight: $font-weight-normal;
+            span:not(.text-blink) {
+                position: relative;
+                letter-spacing: 1.5px;
+                &::after {
+                    content: "";
+                    height: 4px;
+                    background: $primary;
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    right: 0;
+                }
             }
         }
-    }
-}
-
-@keyframes text-blink {
-    0% {
-        display: none;
-        opacity: 0;
-        transition: $transition;
-    }
-    100% {
-        display: inherit;
-        opacity: 1;
-        transition: $transition;
     }
 }

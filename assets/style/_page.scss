@@ -1,31 +1,32 @@
 @import "./theme/variables";
+// 
 @mixin sidebar-view() {
     margin-left: -300px;
     transition: $transition;
 }
 
 body {
-    background: url(https://bootstrapmade.com/demo/templates/iPortfolio/assets/img/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
+    font-family: "Open Sans", sans-serif;
     color: $body-color;
 }
 
-.page {
-    $self: &;
-    display: flex;
-    flex-direction: row;
+aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: $page-height;
+    width: $sidebar-width;
     transition: $transition;
-    &__sidebar {
-        height: 100vh;
-        width: 300px;
-    }
-    &__content {
-        height: 100vh;
-        overflow: auto;
-        flex: 1;
-    }
+}
+
+main {
+    width: calc($page-width - $sidebar-width);
+    margin-left: auto;
+    overflow: auto;
+}
+
+body {
     &.sidebar-hidden {
         @include sidebar-view();
     }

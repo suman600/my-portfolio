@@ -2,7 +2,7 @@ $white: #fff !default;
 $black: #000 !default;
 $primary: #149ddd !default;
 $dark: #272829 !default;
-$grey: #a8a9b4 !default;
+$grey: #6f7180 !default;
 $sidebar-bg-color: #040b14 !default;
 $caption-text-color: #173b6c;
 $light-grey: #f5f8fd;
@@ -37,6 +37,8 @@ sans-serif,
 $spacer: 1rem !default;
 // font enable
 $font-family-base: $font-family-sans-serif !default;
+$font-family-popins-sans-sarif: "Poppins",
+sans-serif !default;
 // font-size
 $font-size-base: 1rem !default;
 $font-size-sm: $font-size-base * .875 !default;
@@ -108,3 +110,6 @@ $carousel-border-color: $primary;
 $carousel-bg-color: $primary;
 $carousel-indicator-transition: all 0.6s ease;
 $carousel-zindex: $zindex-normal;
+$sidebar-width: 300px;
+$page-height: 100vh;
+$page-width: 100vw;

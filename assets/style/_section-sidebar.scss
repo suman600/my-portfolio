@@ -1,6 +1,6 @@
 @import "./theme/variables";
 // 
-aside {
+.sidebar {
     background: $sidebar-bg;
     padding: $spacer;
     display: grid;
@@ -13,6 +13,7 @@ aside {
         text-align: center;
         font-weight: 600;
         margin-bottom: 0;
+        font-family: $font-family-popins-sans-sarif;
     }
     ul {
         list-style: none;
@@ -37,7 +38,7 @@ aside {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
     li {
         background-color: $sidebar-link-bg;
         border-radius: 100%;
@@ -55,6 +56,7 @@ aside {
         height: 36px;
         color: $white;
         text-decoration: none;
+        font-size: 18px;
     }
 }
 
@@ -64,13 +66,13 @@ aside {
             padding: 1rem 2rem 1rem 1rem;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             color: $link-color;
             text-decoration: none;
             transition: $transition;
         }
         i {
-            width: 24px;
+            font-size: 24px;
         }
         &:hover,
         &.active {
