@@ -47,6 +47,7 @@ $font-size-lg: $font-size-base * 1.25 !default;
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
+$font-weight-bolder: 600 !default;
 $font-weight-bold: 700 !default;
 $font-weight-bolder: bolder !default;
 $font-weight-base: $font-weight-normal !default;
@@ -113,3 +114,28 @@ $carousel-zindex: $zindex-normal;
 $sidebar-width: 300px;
 $page-height: 100vh;
 $page-width: 100vw;
+// form
+$form-input-padding-y: .375rem !default;
+$form-input-padding-x: .75rem !default;
+$form-font-size: $font-size-sm !default;
+$form-bg-color: $white !default;
+$form-font-weight: $font-weight-normal !default;
+$form-border-color: lighten($dark, 70%);
+$form-border-radius: 0 !default;
+$form-focus-border-color: rgba($primary, .5) !default;
+$form-transition: border-color .15s ease-in-out,
+box-shadow .15s ease-in-out !default;
+// btn
+$btn-input-padding-y: .375rem !default;
+$btn-input-padding-x: .75rem !default;
+$btn-font-size: $font-size-base !default;
+$btn-bg-color: $primary !default;
+$btn-color: $white !default;
+$btn-font-weight: $font-weight-normal !default;
+$btn-border-color: $primary !default;
+$btn-border-radius: 0.275rem !default;
+$btn-line-height: 1.5 !default;
+$btn-transition: color .15s ease-in-out,
+background-color .15s ease-in-out,
+border-color .15s ease-in-out,
+box-shadow .15s ease-in-out !default;

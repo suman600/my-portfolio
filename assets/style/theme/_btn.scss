@@ -1,0 +1,22 @@
+.btn {
+    display: inline-block;
+    padding: $btn-input-padding-y $badge-padding-x;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+    color: $btn-color;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid $btn-border-color;
+    border-radius: $btn-border-radius;
+    background-color: $btn-bg-color;
+    cursor: pointer;
+    user-select: none;
+    transition: $btn-transition;
+    &:hover {
+        transition: $btn-transition;
+        background-color: darken($btn-bg-color, 10%);
+        border-color: darken($btn-bg-color, 10%);
+    }
+}
