@@ -1,6 +1,11 @@
 //
 // Headings
 //
+body {
+    font-family: "Open Sans", sans-serif;
+    color: $body-color;
+}
+
 .h1 {
     @extend h1;
 }
@@ -23,6 +28,14 @@
 
 .h6 {
     @extend h6;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+    font-family: $font-family-Raleway-sans-sarif;
 }
 
 .lead {

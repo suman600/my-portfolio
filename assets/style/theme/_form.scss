@@ -15,7 +15,14 @@
     outline: none;
     &:focus {
         border-color: $form-focus-border-color;
-        box-shadow: 0 0 0 0.25rem rgba($primary, 25%);
+        box-shadow: $form-box-shadow;
+    }
+    &.in-valid:not(.valid) {
+        border-color: red;
+        &:focus {
+            border-color: $form-focus-invalid-border-color;
+            box-shadow: $form-invalid-box-shadow;
+        }
     }
 }
 

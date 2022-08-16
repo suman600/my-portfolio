@@ -4,8 +4,9 @@ $primary: #149ddd !default;
 $dark: #272829 !default;
 $grey: #6f7180 !default;
 $sidebar-bg-color: #040b14 !default;
-$caption-text-color: #173b6c;
-$light-grey: #f5f8fd;
+$caption-text-color: #173b6c !default;
+$light-grey: #f5f8fd !default;
+$red: #ff0000 !default;
 // enable
 $body-color: $dark !default;
 $sidebar-bg: $sidebar-bg-color !default;
@@ -38,6 +39,8 @@ $spacer: 1rem !default;
 // font enable
 $font-family-base: $font-family-sans-serif !default;
 $font-family-popins-sans-sarif: "Poppins",
+sans-serif !default;
+$font-family-Raleway-sans-sarif: "Raleway",
 sans-serif !default;
 // font-size
 $font-size-base: 1rem !default;
@@ -72,7 +75,7 @@ $resume-sub-title-font-size: $font-size-base * 1.125 !default;
 $headings-margin-bottom: $spacer * .5 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
-$headings-font-weight: 500 !default;
+$headings-font-weight: $font-weight-bold !default;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
 $resume-title-margin-bottom: $spacer * 1.25 !default;
@@ -121,8 +124,12 @@ $form-font-size: $font-size-sm !default;
 $form-bg-color: $white !default;
 $form-font-weight: $font-weight-normal !default;
 $form-border-color: lighten($dark, 70%);
+$form-border-invalid-color: $red;
 $form-border-radius: 0 !default;
 $form-focus-border-color: rgba($primary, .5) !default;
+$form-focus-invalid-border-color: rgba($red, .5) !default;
+$form-box-shadow: 0 0 0 0.25rem rgba($primary, 25%) !default;
+$form-invalid-box-shadow: 0 0 0 0.25rem rgba($red, 25%) !default;
 $form-transition: border-color .15s ease-in-out,
 box-shadow .15s ease-in-out !default;
 // btn
@@ -139,3 +146,15 @@ $btn-transition: color .15s ease-in-out,
 background-color .15s ease-in-out,
 border-color .15s ease-in-out,
 box-shadow .15s ease-in-out !default;
+// scroll 
+$scroll-width: 10px !default;
+$scroll-track-color: $dark !default;
+$scroll-thumb-color: $primary !default;
+// caption
+$caption-margin: $spacer !default;
+$caption-padding: $spacer*1.5 !default;
+$caption-font-weight: $font-weight-bold !default;
+// grid;
+$grid-gap-small: $spacer !default;
+$grid-gap-medium: $spacer*1.5 !default;
+$grid-gap-large: $spacer*2 !default;

@@ -1,17 +1,14 @@
 @import "./theme/variables";
+@import "./theme/mixing";
 // 
 .sidebar {
     background: $sidebar-bg;
     padding: $spacer;
-    display: grid;
-    grid-template-rows: 120px max-content max-content 1fr;
-    gap: 1rem;
-    grid-row-gap: $spacer;
     overflow: auto;
     color: $white;
     h4 {
         text-align: center;
-        font-weight: 600;
+        font-weight: $font-weight-bolder;
         margin-bottom: 0;
         font-family: $font-family-popins-sans-sarif;
     }
@@ -24,7 +21,7 @@
 .sidebar-profile {
     width: 120px;
     height: 120px;
-    margin: 0 auto;
+    margin: 0 auto $spacer;
     border: 8px solid $sidebar-link-bg;
     border-radius: 100%;
     overflow: hidden;
@@ -35,10 +32,9 @@
 }
 
 .sidebar-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+    @include flex-align-js-center();
+    gap: $spacer*.5;
+    margin-top: $spacer;
     li {
         background-color: $sidebar-link-bg;
         border-radius: 100%;
@@ -49,39 +45,36 @@
         }
     }
     a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-align-js-center();
         width: 36px;
         height: 36px;
         color: $white;
         text-decoration: none;
-        font-size: 18px;
+        font-size: $font-size-base*1.125;
     }
 }
 
 .sidebar-link {
+    margin-top: $spacer*2;
     li {
         a {
-            padding: 1rem 2rem 1rem 1rem;
+            padding: $spacer $spacer*2 $spacer $spacer;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: $spacer*.5;
             color: $link-color;
             text-decoration: none;
             transition: $transition;
-        }
-        i {
-            font-size: 24px;
-        }
-        &:hover,
-        &.active {
-            a {
+            i {
+                font-size: $h4-font-size;
+            }
+            &:hover,
+            &.active {
                 color: $white;
                 transition: $transition;
-            }
-            i {
-                color: $primary;
+                i {
+                    color: $primary;
+                }
             }
         }
     }

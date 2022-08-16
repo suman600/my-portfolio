@@ -3,7 +3,7 @@
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
+    grid-gap: $grid-gap-medium;
 }
 
 .portfolio-card {
@@ -34,7 +34,7 @@
             color: $white;
             display: block;
             text-align: center;
-            padding: 10px 10px;
+            padding: $spacer*.65 $spacer*.65;
         }
     }
     &:hover {

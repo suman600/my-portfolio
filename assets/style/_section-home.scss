@@ -25,24 +25,18 @@
         left: 14%;
         h1 {
             font-size: $font-size-base*4;
-            font-weight: $font-weight-bolder;
+            font-weight: $font-weight-bold;
             color: $white;
+            font-family: $font-family-Raleway-sans-sarif;
         }
-        h3 {
+        p {
             color: $white;
-            font-weight: $font-weight-normal;
-            span:not(.text-blink) {
-                position: relative;
-                letter-spacing: 1.5px;
-                &::after {
-                    content: "";
-                    height: 4px;
-                    background: $primary;
-                    position: absolute;
-                    bottom: -6px;
-                    left: 0;
-                    right: 0;
-                }
+            font-family: $font-family-popins-sans-sarif;
+            font-size: $h3-font-size;
+            span {
+                padding-bottom: 4px;
+                letter-spacing: 1px;
+                border-bottom: 3px solid $primary;
             }
         }
     }

@@ -1,8 +1,10 @@
 @import "./theme/variables";
+@import "./theme/mixing";
+// 
 .about-grid {
     display: grid;
     grid-template-columns: 356px 1fr;
-    grid-gap: $spacer*1.5;
+    grid-gap: $grid-gap-medium;
     &__img {
         position: relative;
         img {
@@ -26,10 +28,10 @@
     column-count: 2;
     li {
         position: relative;
-        padding: 12px 0 12px 24px;
+        padding: $spacer*.85 0 $spacer*.85 $spacer*1.5;
         &::after {
             content: "";
-            border: solid #149ddd;
+            border: solid $primary;
             border-width: 0 1px 1px 0;
             display: inline-block;
             padding: 4px;
@@ -40,10 +42,34 @@
         }
         span {
             font-weight: $font-weight-bold;
-            margin-right: 10px;
+            margin-right: $spacer*.65;
         }
     }
     +p {
         margin-bottom: 0;
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $grid-gap-large;
+}
+
+.skills-progress {
+    position: relative;
+    small {
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacer*.5;
+        text-transform: uppercase;
+        &:nth-child(1) {
+            float: left;
+        }
+        &:nth-child(2) {
+            float: right;
+        }
+    }
+    .progress {
+        clear: both;
     }
 }

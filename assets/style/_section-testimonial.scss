@@ -1,9 +1,10 @@
 @import "./theme/variables";
+@import "./theme/mixing";
 // 
 .testimonials-grid {
     display: grid;
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 3rem;
+    grid-column-gap: $grid-gap-medium;
+    grid-row-gap: $grid-gap-medium*2;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -34,8 +35,8 @@
         font-style: italic;
         text-align: center;
         line-height: 1.65;
-        box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
-        margin-bottom: 2.5rem;
+        box-shadow: 0px 2px 15px rgb($black, 10%);
+        margin-bottom: $spacer*2.5;
         i {
             position: relative;
             font-size: $font-size-base*1.65;

@@ -1,9 +1,10 @@
 @import "./theme/variables";
+@import "./theme/mixing";
 //
 .contact-grid {
     display: grid;
     grid-template-columns: 450px 1fr;
-    grid-gap: $spacer*1.5;
+    grid-gap: $grid-gap-medium;
 }
 
 .card {
@@ -12,8 +13,7 @@
         background: $white;
         box-shadow: 0 0 24px 0 rgb($black, 12%);
         .card__column {
-            display: flex;
-            align-items: center;
+            @include flex-align();
             gap: $spacer;
             margin-bottom: $spacer*2;
             i {
