@@ -37,6 +37,7 @@ sans-serif,
 // space 
 $spacer: 1rem !default;
 // font enable
+$font-family-sans-serif: sans-serif;
 $font-family-base: $font-family-sans-serif !default;
 $font-family-popins-sans-sarif: "Poppins",
 sans-serif !default;
@@ -158,3 +159,8 @@ $caption-font-weight: $font-weight-bold !default;
 $grid-gap-small: $spacer !default;
 $grid-gap-medium: $spacer*1.5 !default;
 $grid-gap-large: $spacer*2 !default;
+// alert 
+$alert-padding-y: .75rem !default;
+$alert-padding-x: 1.25rem !default;
+$alert-margin-bottom: 1.25rem !default;
+$alert-border-radis: .25rem !default;

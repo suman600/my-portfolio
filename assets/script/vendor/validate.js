@@ -7,34 +7,42 @@
     const contactEmail = select('contactEmail');
     const contactSubject = select('contactSubject');
     const contactMessage = select('contactMessage');
-
     const contactForm = select('contactForm');
+    const toastSuccess = select('formSuccess');
 
-    contactForm.addEventListener("submit", (event) => {
+
+    formSubmit = () => {
 
         let isContactNameValid = checkUserName();
         let isContactEmailValid = checkUserEmail();
         let isContactSubjectValid = checkUserSubject();
         let isContactMessageValid = checkUserMessage();
 
-        let isContatFormValid = isContactNameValid && isContactEmailValid && isContactSubjectValid && isContactMessageValid;
+        isContatFormValid = isContactNameValid && isContactEmailValid && isContactSubjectValid && isContactMessageValid;
+
         if (isContatFormValid) {
-            return true
+            showTost();
+            formReset();
+            return true;
         } else {
-            event.preventDefault();
-
+            return false
         }
+    }
 
-    })
+    // contactForm.addEventListener("", (event) => {
+
+    // })
 
     const isRequired = value => value.length === 0 ? false : true;
     const isMinMax = (length, min, max) => length < min || length > max ? false : true;
 
     const isEmailValid = (email) => {
-        const regExp = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/';
+
+        const regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
         return regExp.test(email);
     }
+
     const showError = (input) => {
         input.classList.remove('valid');
         input.classList.add('in-valid');
@@ -63,6 +71,7 @@
         }
         return valid;
     };
+
     // email check
     checkUserEmail = () => {
         let valid = false;
@@ -71,7 +80,7 @@
 
         if (!isRequired(userEmail)) {
             showError(contactEmail);
-        } else if (!contactEmail) {
+        } else if (!isEmailValid(userEmail)) {
             showError(contactEmail);
         } else {
             showSuccess(contactEmail);
@@ -81,7 +90,6 @@
     };
 
     //  user subject check
-
     checkUserSubject = () => {
         let valid = false;
         let min = 2;
@@ -101,7 +109,6 @@
     };
 
     //  user messege check
-
     checkUserMessage = () => {
         let valid = false;
         let min = 2;
@@ -120,7 +127,6 @@
         return valid;
     };
 
-
     contactForm.addEventListener('input', function(e) {
         switch (e.target.id) {
             case 'contactName':
@@ -137,5 +143,20 @@
                 break;
         }
     })
+
+    formReset = () => {
+        contactName.value = '';
+        contactEmail.value = '';
+        contactSubject.value = '';
+        contactMessage.value = '';
+    }
+
+    showTost = () => {
+        toastSuccess.classList.add('active');
+    }
+
+    setTimeout((showToast) => {
+        toastSuccess.classList.remove('active')
+    }, 1000);
 
 })();

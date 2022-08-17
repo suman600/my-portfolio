@@ -54,3 +54,29 @@
         padding: 10px 24px;
     }
 }
+
+#formSuccess {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: $font-weight-bolder;
+    width: 500px;
+    display: none;
+    z-index: $zindex-fixed;
+    &.active {
+        animation: animatetop 0.3s;
+        animation-name: fade-up;
+        display: block;
+        top: 2rem;
+    }
+}
+
+@keyframes fade-up {
+    from {
+        top: $spacer*5;
+    }
+    to {
+        top: $spacer*2;
+    }
+}
