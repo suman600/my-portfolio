@@ -38,7 +38,7 @@
 
     const isEmailValid = (email) => {
 
-        const regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,30})+$/;
 
         return regExp.test(email);
     }
@@ -153,10 +153,11 @@
 
     showTost = () => {
         toastSuccess.classList.add('active');
+        setTimeout(() => {
+            toastSuccess.classList.remove('active');
+        }, 2000);
     }
 
-    setTimeout((showToast) => {
-        toastSuccess.classList.remove('active')
-    }, 1000);
+
 
 })();
