@@ -127,22 +127,17 @@
         return valid;
     };
 
-    contactForm.addEventListener('input', function(e) {
-        switch (e.target.id) {
-            case 'contactName':
-                checkUserName();
-                break;
-            case 'contactEmail':
-                checkUserEmail();
-                break;
-            case 'contactSubject':
-                checkUserSubject();
-                break;
-            case 'contactMessage':
-                checkUserMessage();
-                break;
+    const debounce = (fn, deley = 500) => {
+        let debounceTimer
+        return (...args) => {
+            if (debounceTimer) {
+                clearTimeout(debounceTimer)
+            }
+            debounceTimer = setTimeout(() => {
+                fn.apply(null, args)
+            }, deley)
         }
-    })
+    }
 
     formReset = () => {
         contactName.value = '';
@@ -158,6 +153,21 @@
         }, 2000);
     }
 
-
+    contactForm.addEventListener('input', debounce(function(e) {
+        switch (e.target.id) {
+            case 'contactName':
+                checkUserName();
+                break;
+            case 'contactEmail':
+                checkUserEmail();
+                break;
+            case 'contactSubject':
+                checkUserSubject();
+                break;
+            case 'contactMessage':
+                checkUserMessage();
+                break;
+        }
+    }))
 
 })();

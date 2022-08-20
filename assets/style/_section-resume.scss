@@ -4,13 +4,13 @@
 .resume-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: 50% 50%;
     grid-gap: $grid-gap-medium;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr)
+    }
     h3 {
         color: $resume-title-color;
-        font-size: $resume-title-font-size;
-        margin-bottom: $resume-title-margin-bottom;
-        font-weight: $font-weight-bold;
+        margin-bottom: $spacer;
     }
 }
 
@@ -19,8 +19,7 @@
     padding-left: $spacer*1.5;
     margin-bottom: $spacer*1.5;
     h5 {
-        font-weight: $font-weight-bold;
-        font-size: $resume-sub-title-font-size;
+        font-size: $font-size-base*1.125;
         color: $resume-title-color;
         line-height: $line-height-xs;
         margin-bottom: $spacer;

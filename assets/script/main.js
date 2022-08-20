@@ -77,10 +77,9 @@
 
     //Mobile nav toggle
 
-    on('click', '.mobile-nav-toggle', function(e) {
-        select('body').classList.toggle('mobile-nav-active')
-        this.classList.toggle('bi-list')
-        this.classList.toggle('bi-x')
+    on('click', '.nav-toggler', function(e) {
+        select('aside').classList.toggle('show');
+        this.classList.toggle('show');
     })
 
     //Scrool with ofset on links with a class name .sidebar-link__list
@@ -136,6 +135,7 @@
             mirror: false
         })
     });
+
 
 
 })()

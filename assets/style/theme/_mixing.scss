@@ -1,3 +1,4 @@
+// flex
 @mixin flex-align {
     display: flex;
     align-items: center;
@@ -6,4 +7,15 @@
 @mixin flex-align-js-center {
     @include flex-align();
     justify-content: center;
+}
+
+@mixin flex-column-align-js-center {
+    @include flex-align-js-center();
+    flex-direction: column;
+}
+
+// sidebar 
+@mixin sidebar-view() {
+    margin-left: -$sidebar-width;
+    transition: $transition;
 }

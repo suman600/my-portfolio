@@ -23,21 +23,26 @@
         position: absolute;
         top: 30%;
         left: 14%;
+    }
+    h1 {
+        color: $white;
+    }
+    p {
+        color: $white;
+        font-family: $font-family-popins-sans-sarif;
+        font-size: $h3-font-size;
+        span {
+            padding-bottom: 4px;
+            letter-spacing: 1px;
+            border-bottom: 3px solid $primary;
+        }
+    }
+    @media screen and (min-width: 767px) {
         h1 {
             font-size: $font-size-base*4;
-            font-weight: $font-weight-bold;
-            color: $white;
-            font-family: $font-family-Raleway-sans-sarif;
         }
         p {
-            color: $white;
-            font-family: $font-family-popins-sans-sarif;
-            font-size: $h3-font-size;
-            span {
-                padding-bottom: 4px;
-                letter-spacing: 1px;
-                border-bottom: 3px solid $primary;
-            }
+            font-size: $font-size-base*1.625;
         }
     }
 }

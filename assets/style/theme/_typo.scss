@@ -1,11 +1,6 @@
 //
 // Headings
 //
-body {
-    font-family: "Open Sans", sans-serif;
-    color: $body-color;
-}
-
 .h1 {
     @extend h1;
 }

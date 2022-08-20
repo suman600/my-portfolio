@@ -12,16 +12,15 @@ $body-color: $dark !default;
 $sidebar-bg: $sidebar-bg-color !default;
 $caption-color: $caption-text-color !default;
 $primary-light-bg: $light-grey !default;
-$progress-bg: $light-grey !default;
-$resume-title-color: #050d18 !default;
-$resume-border-color: #1f5297 !default;
-$sidebar-link-bg: #212431 !default;
+$progress-bg: darken($light-grey, 2.5%) !default;
 // Style anchor elements.
 $link-color: $grey !default;
 $link-decoration: underline !default;
 $link-hover-color: $primary !default;
+// space 
+$spacer: 1rem !default;
 // font
-$font-family-sans-serif: system-ui,
+$font-family-system-sans-serif: system-ui,
 -apple-system,
 "Segoe UI",
 Roboto,
@@ -34,11 +33,9 @@ sans-serif,
 "Segoe UI Emoji",
 "Segoe UI Symbol",
 "Noto Color Emoji" !default;
-// space 
-$spacer: 1rem !default;
 // font enable
+$font-family-base: $font-family-system-sans-serif !default;
 $font-family-sans-serif: sans-serif;
-$font-family-base: $font-family-sans-serif !default;
 $font-family-popins-sans-sarif: "Poppins",
 sans-serif !default;
 $font-family-Raleway-sans-sarif: "Raleway",
@@ -70,8 +67,10 @@ $h6-font-size: $font-size-base !default;
 $lead-font-size: $font-size-base * 1.25 !default;
 $lead-font-weight: 300 !default;
 $small-font-size: .875em !default;
-$resume-title-font-size: $font-size-base * 1.625 !default;
-$resume-sub-title-font-size: $font-size-base * 1.125 !default;
+// resume
+$resume-title-color: #050d18 !default;
+$resume-border-color: #1f5297 !default;
+$sidebar-link-bg: #212431 !default;
 // // scss-docs-start headings-variables
 $headings-margin-bottom: $spacer * .5 !default;
 $headings-font-family: null !default;
@@ -79,7 +78,6 @@ $headings-font-style: null !default;
 $headings-font-weight: $font-weight-bold !default;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
-$resume-title-margin-bottom: $spacer * 1.25 !default;
 // zindex
 $zindex-dropdown: 1000 !default;
 $zindex-sticky: 1020 !default;

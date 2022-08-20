@@ -4,6 +4,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: $grid-gap-medium;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr)
+    }
 }
 
 .portfolio-card {
