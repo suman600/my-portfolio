@@ -1,0 +1,73 @@
+@import "./theme/variables";
+@import "./theme/mixing";
+//
+.contact-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    grid-gap: $grid-gap-medium;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .form-group {
+        @media screen and (min-width: 768px) {
+            &:nth-child(2)~* {
+                grid-column: 2 span / auto;
+            }
+        }
+    }
+    textarea {
+        height: auto;
+    }
+    button[type=submit] {
+        border: 0;
+        padding: 10px 24px;
+    }
+}
+
+.card {
+    &--contact {
+        padding: $spacer*2;
+        background: $white;
+        box-shadow: 0 0 24px 0 rgb($black, 12%);
+        .card__column {
+            @include flex-align();
+            gap: $spacer;
+            margin-bottom: $spacer*2;
+            i {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-size-lg;
+                background-color: rgb($primary, .15);
+                border-radius: 100%;
+                color: $primary;
+            }
+            h4 {
+                margin-bottom: 0;
+                font-weight: $font-weight-bolder;
+                flex: 1;
+            }
+            span {
+                display: block;
+                font-size: $font-size-sm;
+                font-weight: $font-weight-normal;
+                color: $caption-text-color;
+                margin-top: $spacer*.5;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            padding: $spacer $spacer;
+        }
+    }
+}

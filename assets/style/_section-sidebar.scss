@@ -1,0 +1,81 @@
+@import "./theme/variables";
+@import "./theme/mixing";
+// 
+.sidebar {
+    background: $sidebar-bg;
+    padding: $spacer;
+    overflow: auto;
+    color: $white;
+    h4 {
+        text-align: center;
+        font-weight: $font-weight-bolder;
+        margin-bottom: 0;
+        font-family: $font-family-popins-sans-sarif;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+.sidebar-profile {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto $spacer;
+    border: 8px solid $sidebar-link-bg;
+    border-radius: 100%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.sidebar-social {
+    @include flex-align-js-center();
+    gap: $spacer*.5;
+    margin-top: $spacer;
+    li {
+        background-color: $sidebar-link-bg;
+        border-radius: 100%;
+        transition: $transition;
+        &:hover {
+            background-color: $primary;
+            transition: $transition;
+        }
+    }
+    a {
+        @include flex-align-js-center();
+        width: 36px;
+        height: 36px;
+        color: $white;
+        text-decoration: none;
+        font-size: $font-size-base*1.125;
+    }
+}
+
+.sidebar-link {
+    margin-top: $spacer*2;
+    li {
+        a {
+            padding: $spacer $spacer*2 $spacer $spacer;
+            display: inline-flex;
+            align-items: center;
+            gap: $spacer*.5;
+            color: $link-color;
+            text-decoration: none;
+            transition: $transition;
+            i {
+                font-size: $h4-font-size;
+            }
+            &:hover,
+            &.active {
+                color: $white;
+                transition: $transition;
+                i {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

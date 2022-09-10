@@ -1,0 +1,64 @@
+.form-control {
+    position: relative;
+    display: inline-block;
+    font-size: $form-font-size;
+    border-radius: $form-border-radius;
+    width: 100%;
+    height: 44px;
+    border: 1px solid $form-border-color;
+    padding: $form-input-padding-y $form-input-padding-x;
+    background: $form-bg-color;
+    font-weight: $form-font-weight;
+    background-clip: padding-box;
+    appearance: none;
+    transition: $form-transition;
+    outline: none;
+    &:focus {
+        border-color: $form-focus-border-color;
+        box-shadow: $form-box-shadow;
+    }
+    &.in-valid:not(.valid) {
+        border-color: red;
+        &:focus {
+            border-color: $form-focus-invalid-border-color;
+            box-shadow: $form-invalid-box-shadow;
+        }
+    }
+}
+
+.form-group {
+    margin-bottom: $spacer*2;
+    label {
+        margin-bottom: $spacer*.5;
+    }
+}
+
+.form-center {
+    text-align: center;
+}
+
+#formSuccess {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: $font-weight-bolder;
+    width: 500px;
+    display: none;
+    z-index: $zindex-fixed;
+    &.active {
+        animation: animatetop 0.3s;
+        animation-name: fade-up;
+        display: block;
+        top: 2rem;
+    }
+}
+
+@keyframes fade-up {
+    from {
+        top: $spacer*5;
+    }
+    to {
+        top: $spacer*2;
+    }
+}

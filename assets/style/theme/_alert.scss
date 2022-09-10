@@ -1,0 +1,12 @@
+.alert {
+    position: relative;
+    padding: $alert-padding-y $alert-padding-x;
+    margin-bottom: $alert-margin-bottom;
+    border: 1px solid transparent;
+    border-radius: $alert-border-radis;
+    &--contact-form {
+        background: $dark;
+        color: $white;
+        border-color: $dark;
+    }
+}

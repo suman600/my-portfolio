@@ -1,0 +1,48 @@
+@import "./theme/variables";
+// 
+.section-home {
+    position: relative;
+    background: url(https://bootstrapmade.com/demo/templates/iPortfolio/assets/img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba($sidebar-bg, .3);
+        z-index: $zindex-normal;
+    }
+    .wrapper {
+        position: relative;
+        z-index: 99;
+        position: absolute;
+        top: 30%;
+        left: 14%;
+    }
+    h1 {
+        color: $white;
+    }
+    p {
+        color: $white;
+        font-family: $font-family-popins-sans-sarif;
+        font-size: $h3-font-size;
+        span {
+            padding-bottom: 4px;
+            letter-spacing: 1px;
+            border-bottom: 3px solid $primary;
+        }
+    }
+    @media screen and (min-width: 767px) {
+        h1 {
+            font-size: $font-size-base*4;
+        }
+        p {
+            font-size: $font-size-base*1.625;
+        }
+    }
+}
